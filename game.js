@@ -20,7 +20,8 @@ function send() {
     num2 = document.getElementById("num2").value;
     console.log(num2);
 
-    question = num1 + "x" + num2;
+    question = parseInt(num1) + "x" + parseInt(num2);
+    answer = parseInt(num1) * parseInt(num2);
 
     console.log(question);
 
@@ -30,7 +31,8 @@ function send() {
     row = Question_html + input_box + check_button;
 
     document.getElementById("output").innerHTML = row;
-    document.getElementById("word").value = "";
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
 }
 
 question_turn = "p1";
